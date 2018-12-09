@@ -1,0 +1,19 @@
+{
+  "name": "pokepick",
+  "version": "1.0.0",
+  "description": "cs546 project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkang6/pokepick.git"
+  },
+  "author": "Harkirat Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkang6/pokepick/issues"
+  },
+  "homepage": "https://github.com/hkang6/pokepick#readme"
+}
