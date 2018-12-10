@@ -10,10 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/hkang6/pokepick.git"
   },
-  "author": "Harkirat Kang",
+  "author": "Harkirat Kang, Yan Wu, Jiaming Wang, Nisheet Thakur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hkang6/pokepick/issues"
   },
-  "homepage": "https://github.com/hkang6/pokepick#readme"
+  "homepage": "https://github.com/hkang6/pokepick#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.1.10",
+    "node-uuid": "^1.4.8"
+  }
 }
