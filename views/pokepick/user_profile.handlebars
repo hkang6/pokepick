@@ -1,0 +1,17 @@
+<div>
+    <h2>Welcome {{this.profile.name}}</h2>
+    <br/>
+    <p>Here is some information about yourself:</p>
+    <ul>
+        <li>User ID: {{this._id}}</li>
+        <li>Name: {{this.profile.name}}</li>
+        <li>Hobby: {{this.profile.hobby}}</li>
+        <li>Gender: {{this.profile.gender}}</li>
+    </ul>
+    
+    <a href=logout action="/logout">Logout</a>
+
+</div>
+{{#if error}}
+<p>{{error}}</p>
+{{/if}}
