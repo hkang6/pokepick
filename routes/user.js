@@ -31,12 +31,12 @@ router.post("/", async(req, res) => {
     }
 })
 
-router.put('/:id', async (req, res) => {
+router.patch('/:id', async (req, res) => {
     let info = req.body;
     try{
         await userData.getUserById(req.params.id);        
         const updateUser = await userData.updateUser(req.params.id, info);
-        res.status(200).json({success:"You have been updated "});
+        res.status(200).json(updateUser);
     }catch(error){
         res.status(404).json({error: "cannot found user"});
     }
