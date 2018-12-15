@@ -25,13 +25,11 @@ module.exports = {
     
       async addUser(info) {
         console.log(info);
-        // if(!info.userName)throw"No userName was provided";
-        // if(!info.name)throw"No lastName was provided";
-        // if(!info.password)throw"No password was provided";
-        // if(!info.gender)throw"No gender was provided";
-        // if(!info.email)throw"No email was provided";
-        // if(!info.hobby)throw"No hobby was provided";
-        //if(!info.hashedPassword)throw"No hasedPassword was provided";
+        //check the username and password, which must be provide at this time 
+        if(!info.userName)throw"No userName was provided";
+        if(!info.password)throw"No password was provided";
+        
+        
         const userCollection = await users();
         const saltRounds = 10;
         let myPassword = info.password;
@@ -71,16 +69,11 @@ module.exports = {
       },
 
       async updateUser(id, info) {
-        
+        if(!id)throw "No id was provided";
+        if(!info)throw "No new Input"
         const userCollection = await users();
         let updatedUser = {};
 
-        if(info.firstName){
-          updatedUser.firstName = info.firstName;
-        }
-        if(info.lastName){
-          updatedUser.lastName = info.lastName;
-        }
         if(info.password){
           updatedUser.password = info.password;
         }
@@ -109,6 +102,26 @@ module.exports = {
         return await this.getUserById(id);
       },
 
+      async  admanRight(id){
+        const userCollection = await users();
+        let updatedUser = {};
+        updataedUser.adman = true;
+        let updateCommand = {
+          $set: updatedUser
+        };
+        const query = {
+          _id: id
+         };
+
+        const updatedInfo = await userCollection.updateOne(query, updateCommand);
+        
+        if (updatedInfo.modifiedCount === 0) {
+          throw "could not update user successfully";
+        }
+    
+        let ADman =  await this.getUserById(id);
+        return ADman.adman;
+      }
       // async findUserByUserName(userName){
       //   let users = getAllUsers();
       //   console.log("findUser");
