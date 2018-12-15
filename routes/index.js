@@ -1,14 +1,16 @@
-const profileRoutes = require("./profile");
-const searchRoutes = require("./search");
-const homeRoutes = require("./home");
-const path = require("path");
 const express = require('express');
-
+const router = express.Router();
+const pokemonRoutes = require("./pokemons");
+const path = require("path");
 
 const constructorMethod = app => {
+    app.use("/pokemons", pokemonRoutes);
+    app.get("/about", (req, res) => {
+        res.sendFile(path.resolve("static/about.html"));
+    })
 
     app.use("*", (req, res) => {
-        res.render("pokepick/home");
+        res.redirect("/pokemons");
     })
 }
 
