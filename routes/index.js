@@ -1,5 +1,3 @@
-const profileRoutes = require("./profile");
-const searchRoutes = require("./search");
 const homeRoutes = require("./home");
 const path = require("path");
 const express = require('express');
@@ -13,7 +11,7 @@ const constructorMethod = app => {
     // app.get('/', (req, res) => {
     //     res.send('welcome to pokemonDB');
     // })
-    app.use("/", loginRoutes);
+    app.use("/",loginRoutes);
     app.use("/findUser",findUser);
     app.use("/signup", signupRoutes);
     app.use("/pokemons", pokemonRoutes);

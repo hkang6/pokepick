@@ -32,7 +32,8 @@ router.get("/", async (req, res) => {
     const pokemonList = await pokemonData.getAllPokemons();
         // res.json(pokemonList);
   // res.render("pokemons/index", {pokemons: pokemonList});
-   res.send(pokemonList);
+   res.render('pokepick/pokemons', {pokemons: pokemonList});
+   //res.send(pokemonList);
 })
 
 router.post("/", async (req, res) => {

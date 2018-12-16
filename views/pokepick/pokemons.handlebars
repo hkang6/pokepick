@@ -1,0 +1,21 @@
+<div>
+    <h2>PokeMon Database</h2>
+    <br/>
+        <a href="/user_profile" class="btn btn-default btn-lg btn-square">profile</a>
+    <br/>
+    <p>Please search pokemon by name or type:</p>
+
+    <input type="text" id="myInput" placeholder="Search by type or name..">
+
+  
+     <br>
+     <br>
+    
+    <a href=logout action="/logout">Logout</a>
+
+
+
+</div>
+{{#if error}}
+<p>{{error}}</p>
+{{/if}}
