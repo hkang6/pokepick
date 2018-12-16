@@ -9,18 +9,22 @@ const userData  = data.user;
 
 
     router.get('/', (req, res) => {
-        res.render('pokepick/signup', { error: req.flash('invalid') });
+        res.render('pokepick/find_user', { error: req.flash('invalid') });
     })
 
     router.post("/", async(req, res) => {
         let info = req.body;
         try{
-            const addUser = await userData.addUser(info);
-            res.redirect('/login');
+            const findUser = await userData.findUserByUserName(userName)
+            console.log(findUser);
+            res.send(findUser);
         }catch(error){
             res.status(500).json({error: "Could not add user"});
         }
     })
+
+
+    
 
 
 module.exports = router;
