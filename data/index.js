@@ -1,5 +1,8 @@
+const userData = require('./user');
 const pokemonRoutes = require("./pokemons");
-
+const pokemonimageData = require("./uploadpokemon")
 module.exports = {
-    pokemons: pokemonRoutes
-};
+    user: userData,
+    pokemons: pokemonRoutes,
+    pokemonsimage: pokemonimageData
+}
