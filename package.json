@@ -1,5 +1,5 @@
 {
-  "name": "mongowoshishi",
+  "name": "CS 46 FINAL",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,7 +7,7 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "yanwu 10427132",
+  "author": "Harkirat Kang, Yan Wu, Nisheet Thakur, Jiaming Wang",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.2",

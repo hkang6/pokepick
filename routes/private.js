@@ -4,7 +4,7 @@ const router = express.Router();
 router.get("/pokemons", (req, res) => {
 
    
-    res.render('pokepick/pokemons');
+    res.redirect('/pokemons');
     
 });
 

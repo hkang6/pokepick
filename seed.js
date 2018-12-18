@@ -12,31 +12,28 @@ dbConnection().then(
       })
       .then(db => {
         return pokemons
-          .addPokemon("1", "Balbusaur", "grass", 118, 111, 128, 1115, "so cool!")
+          .addPokemon("1", "BULBASAUR", "grass", 118, 111, 128, 1115)
           .then(() => {
             return pokemons.addPokemon(
                 "147",
-                "Dratini",
+                "DRATINI",
                 "dragon",
                 119,
                 91,
                 121,
-                1004,
-                "the best"
+                1004
             );
           })
           .then(() => {
             return pokemons.addPokemon(
                 "371",
-                "Bagon",
+                "BAGON",
                 "dragon",
                 134,
                 93,
                 128,
-                1156,
-                "my favorite"
+                1156
             );
-        
           });
       })
       .then(() => {

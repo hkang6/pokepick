@@ -69,13 +69,18 @@
     <br>
     <br>
     {{#each pokemons}}
-   <!-- <p>{{@index}}.{{this}}</p> -->
+    <!-- <p>{{@index}}.{{this}}</p> -->
     <ul>
         <li>Pokemon ID: {{this._id}}</li>
         <li>Name: {{this.name}}</li>
         <li>Type: {{this.type}}</li>
         <li>Comments: {{this.comments}}</li>
-        <!-- add add to team button -->
+        <!-- add to team button -->
+        <br> 
+        <form action="http://localhost:3000/user_profile/" method="post" >
+            <button type="submit" value="{{this.name}}">Add To My Team</button>
+        </form>
+
 
     </ul>
     {{/each}}
@@ -83,7 +88,10 @@
     <form action="http://localhost:3000/pokemons/" method="post" >
         <input type="text" class = "aa" name="search" placeholder="search pokemon by its name..">
             <button type="submit" value="{{this.name}}">search</button>
-        </form> 
+        </form>
+
+        <br>
+        <br>
 
 
 </div>
