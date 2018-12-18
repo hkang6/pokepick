@@ -1,4 +1,4 @@
-/*const mongoCollection = require("../dbConfig/mongoCollection");
+const mongoCollection = require("../dbConfig/mongoCollection");
 const pokemons = mongoCollection.pokemons;
 const uuid = require("node-uuid");
 
@@ -228,4 +228,4 @@ module.exports = {
     addPokemon,
     removePokemon,
     addComment 
-} */
+}

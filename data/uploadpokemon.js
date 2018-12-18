@@ -9,7 +9,6 @@ let exportedMethods = {
         return await pCollection.find({}).toArray();
     },
 
-
     async getPokemonByID(id) {
         if (!id) throw "There is no pokemon";
         console.log("Hello There..."+id);
@@ -20,18 +19,6 @@ let exportedMethods = {
         if (ppokemon === null) throw "There is no pokemon";
         console.log("HEy ypu fasdjzbcx akdjxz,fhbcnaosjlx"+ppokemon);
         return ppokemon;
-    },
-
-    async getPokemonByNameUser(name) {
-        if (!name) throw "There is no pokemon";
-        console.log("Hello There..."+name);
-        const pokemonCollection = await pokemonData();
-        let npokemon = await pokemonCollection.findOne({
-            name: name
-        })
-        if (npokemon === null) throw "There is no pokemon";
-        console.log("HEy ypu fasdjzbcx akdjxz,fhbcnaosjlx"+npokemon);
-        return npokemon;
     },
 
     async addpokemonData(pname, ptype, pmax_atk, pmax_def, pmax_hp, pmax_cp, imagename, mimetype, imagepath){

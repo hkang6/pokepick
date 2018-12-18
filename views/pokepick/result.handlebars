@@ -43,11 +43,11 @@
     
     <!-- filter 
 <input type="text" name="search" placeholder="search pokemon by its name..">
-    <button type="search">search</button> -->
+    <button type="search">search</button> 
     <form id= "filter-form" method = "post">
         <div class = "form-group">
             <label for="string"> Please provide pokemon name to search: </label>
-                <input type="string" class="form-control" id= "string"name="string" placeholder="name" value="{{string}}">
+                <input type="text" class="aa" name="search" placeholder="name" value="{{string}}">
         </div>
          <div class="form-group hidden" id="error-container">
 
@@ -62,7 +62,12 @@
         <div class="alert alert-success text-goes-here">
         </div>
       </div>
-    </form>
+    </form> -->
+ 
+    <form action="http://localhost:3000/pokemons/" method="post" >
+        <input type="text" class = "aa" name="search" placeholder="search pokemon by its name..">
+            <button type="submit" value="{{this.name}}">search</button>
+        </form> 
 
     <br>
     <br>
