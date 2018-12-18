@@ -53,6 +53,7 @@ router.post('/', async (req, res) => {
     let postPokemonData = req.body;
     let name = req.body.search;
     console.log(name);
+    // console.log(postPokemonData.type);
     let errors = [];
 
     if(!postPokemonData.id|| typeof(id)!= "number" || id > 493) {
@@ -95,6 +96,7 @@ router.post('/', async (req, res) => {
 
     // try {
         let resultAll = await pokemonData.getPokemonByName(name);
+        console.log(resultAll);
         let resultStringify = JSON.stringify(resultAll);
         let pokes = resultAll;
         if(resultStringify == JSON.stringify([])) {
