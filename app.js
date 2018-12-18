@@ -79,7 +79,7 @@ app.use(function(request, response, next) {
 
 
 app.listen(3000, ()=> {
-    console.log("Sever is running on => http://localhost:3000");
+    console.log("Server is running on => http://localhost:3000");
 
     //Add the line for grading
     if (process && process.send) process.send({done: true});

@@ -18,7 +18,7 @@ const constructorMethod = app => {
 	app.use("/home", (req, res) => {   
         res.render("pokepick/home");  
     })
-
+    
     app.use('/user', userRoute);
     app.use("*", (req, res) => {
         res.redirect("/");
